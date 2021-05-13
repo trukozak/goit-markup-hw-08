@@ -1,0 +1,36 @@
+.contact-nav__item {
+  &:nth-child(2) {
+    margin-left: 50px;
+  }
+}
+
+.contact-nav__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contact-nav__icon {
+  margin-right: 10px;
+
+  fill: var(--secondary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contact-nav__link:hover &,
+  .contact-nav__link:focus & {
+    fill: var(--accent-color);
+  }
+}
