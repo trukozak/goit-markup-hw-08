@@ -1,8 +1,3 @@
-.clients__content {
-  padding-top: 100px;
-  padding-bottom: 88px;
-}
-
 .clients__list {
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +9,15 @@
   display: flex;
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap-two);
-  flex-basis: calc(100% / 6 - var(--card-set-gap));
+  flex-basis: calc(100% / 2 - var(--card-set-gap));
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - var(--card-set-gap));
+  }
 }
 
 .clients__link {

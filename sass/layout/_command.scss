@@ -3,25 +3,43 @@
 }
 
 .command__list {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .command__item {
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
-  flex-basis: calc(100% / 4 - var(--card-set-gap));
 
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--primary-white-color);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - var(--card-set-gap));
+  }
 }
 
 .command__card {
-  padding: 30px 32px;
+  padding: 30px 122px 24px;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 74px 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
 }
 
 .command__name {
