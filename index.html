@@ -19,13 +19,17 @@
 
   <body>
     <!-- Верхняя линия -->
-    <!-- <header class="header header__border">
+    <header class="header header__border">
       <div class="container header__container">
+        <a href="./index.html" class="logo header__logo link">
+          <span class="logo-web">Web</span>Studio
+        </a>
+        <button class="header__button-open-menu" type="button" data-menu-button>
+          <svg class="header__button-icon-" width="24" height="16" aria-label="переключатель мобильного меню">
+            <use href="./image/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <nav class="navigation header__navigation">
-          <a href="./index.html" class="logo header__logo link">
-            <span class="logo-web">Web</span>Studio
-          </a>
-
           <ul class="site-nav header__site-nav list">
             <li class="site-nav__item">
               <a
@@ -54,7 +58,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="contact-nav__item">
+          <li class="contact-nav__item contact-nav__item-tel">
             <a class="contact-nav__link link" href="tel:+380961111111">
               <svg class="contact-nav__icon" width="16" height="16">
                 <use href="./image/icons.svg#icon-smartphone"></use>
@@ -63,17 +67,98 @@
             >
           </li>
         </ul>
+
+        <div class="mobile-menu header__mobile-menu" data-menu>
+          <ul class="mobile-nav-menu__list list">
+            <li class="mobile-nav-menu__item">
+              <a
+                class="mobile-nav-menu__link mobile-nav-menu__link--active link"
+                href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="mobile-nav-menu__item">
+              <a class="mobile-nav-menu__link link" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-nav-menu__item">
+              <a class="mobile-nav-menu__link link" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="mobile-menu__contact-thumb">
+            <ul class="mobile-menu-contact__list list">
+              <li class="mobile-menu-contact__item">
+                <a
+                  class="mobile-menu-contact__link-tel link"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu-contact__item">
+                <a
+                  class="mobile-menu-contact__link-mail link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-social__list list">
+              <li class="mobile-social__item">
+                <a
+                  class="mobile-social__link link"
+                  href="https://instagram.com"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-social__item">
+                <a
+                  class="mobile-social__link link"
+                  href="https://twitter.com"
+                  target="_blank"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-social__item">
+                <a
+                  class="mobile-social__link link"
+                  href="https://facebook.com"
+                  target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-social__item">
+                <a
+                  class="mobile-social__link link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button class="mobile-menu-btn__close" type="button" data-menu-close>
+            <svg class="mobile-menu-btn__close-icon" width="24" height="16">
+              <use href="./image/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
       </div>
-    </header> -->
+    </header>
 
     <!-- Основа -->
     <main>
       <!-- Герой -->
       <section class="hero hero__content">
-          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="btn hero__button" data-modal-open>
-            Заказать услугу
-          </button>
+        <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+        <button type="button" class="btn hero__button" data-modal-open>
+          Заказать услугу
+        </button>
       </section>
 
       <!-- Особености-->
@@ -138,33 +223,75 @@
           <h2 class="work__title title">Чем мы занимаемся</h2>
           <ul class="work__list list">
             <li class="work__item">
-              <img
-                class="work__img"
-                src="./image/employment/img1.jpg"
-                alt="Написание програмы на планшете"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/employment/webp/tablet1x.webp 1x,
+                    ./image/employment/webp/tablet2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/employment/tablet1x.jpg 1x,
+                    ./image/employment/tablet2x.jpg 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="./image/employment/drawing-tablet1x.jpg"
+                  alt="планшет"
+                />
+              </picture>
               <p class="work__text">Десктопные приложения</p>
             </li>
             <li class="work__item">
-              <img
-                class="work__img"
-                src="./image/employment/img2.jpg"
-                alt="Робота за компьютером"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/employment/webp/phone1x.webp 1x,
+                    ./image/employment/webp/phone2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/employment/phone1x.jpg 1x,
+                    ./image/employment/phone2x.jpg 2x
+                  "
+                  type="image/webp"
+                />
+                <img src="./image/employment/phone1x.jpg" alt="телефон" />
+              </picture>
               <p class="work__text">Мобильные приложения</p>
             </li>
             <li class="work__item">
-              <img
-                class="work__img"
-                src="./image/employment/img3.jpg"
-                alt="Выбор цвета на планшете"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/employment/webp/drawing-tablet1x.webp 1x,
+                    ./image/employment/webp/drawing-tablet2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./image/employment/drawing-tablet1x.jpg 1x,
+                    ./image/employment/drawing-tablet2x.jpg 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  src="./image/employment/drawing-tablet1x.jpg"
+                  alt="планшет для рисования"
+                />
+              </picture>
               <p class="work__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -177,12 +304,57 @@
           <h2 class="command__title title">Наша команда</h2>
           <ul class="command__list list">
             <li class="command__item">
-              <img
-                src="./image/command/img4.jpg"
-                alt="парень"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/command/webp/product-designer-desktop-1x.webp 1x,
+                    ./image/command/webp/product-designer-desktop-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/product-designer-desktop-1x.jpg 1x,
+                    ./image/command/product-designer-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/product-designer-tablet-1x.webp 1x,
+                    ./image/command/webp/product-designer-tablet-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/product-designer-tablet-1x.jpg 1x,
+                    ./image/command/product-designer-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/product-designer-phone-1x.webp 1x,
+                    ./image/command/webp/product-designer-phone-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/product-designer-phone-1x.jpg 1x,
+                    ./image/command/product-designer-phone-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./image/command/product-designer-desktop-1x.jpg"
+                  alt="дизайнер"
+                />
+              </picture>
               <div class="command__card">
                 <h3 class="command__name">Игорь Демьяненко</h3>
                 <p class="command__specialty">Product Designer</p>
@@ -219,12 +391,57 @@
               </div>
             </li>
             <li class="command__item">
-              <img
-                src="./image/command/img5.jpg"
-                alt="девушка"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/command/webp/frontenddeveloper-desktop-1x.webp 1x,
+                    ./image/command/webp/frontenddeveloper-desktop-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/frontenddeveloper-desktop-1x.jpg 1x,
+                    ./image/command/frontenddeveloper-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/frontenddeveloper-tablet-1x.webp 1x,
+                    ./image/command/webp/frontenddeveloper-tablet-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/frontenddeveloper-tablet-1x.jpg 1x,
+                    ./image/command/frontenddeveloper-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/frontenddeveloper-phone-1x.webp 1x,
+                    ./image/command/webp/frontenddeveloper-phone-2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./image/command/frontenddeveloper-phone-1x.jpg 1x,
+                    ./image/command/frontenddeveloper-phone-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./image/command/frontenddeveloper-desktop-1x.jpg"
+                  alt="дизайнер"
+                />
+              </picture>
               <div class="command__card">
                 <h3 class="command__name">Ольга Репина</h3>
                 <p class="command__specialty">Frontend Developer</p>
@@ -261,12 +478,57 @@
               </div>
             </li>
             <li class="command__item">
-              <img
-                src="./image/command/img6.jpg"
-                alt="парень"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/command/webp/marketing-desktop-1x.webp 1x,
+                    ./image/command/webp/marketing-desktop-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/marketing-desktop-1x.jpg 1x,
+                    ./image/command/marketing-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/marketing-tablet-1x.webp 1x,
+                    ./image/command/webp/marketing-tablet-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/marketing-tablet-1x.jpg 1x,
+                    ./image/command/marketing-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/marketing-phone-1x.webp 1x,
+                    ./image/command/webp/marketing-phone-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/marketing-phone-1x.jpg 1x,
+                    ./image/command/marketing-phone-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./image/command/marketing-desktop-1x.jpg"
+                  alt="дизайнер"
+                />
+              </picture>
               <div class="command__card">
                 <h3 class="command__name">Николай Тарасов</h3>
                 <p class="command__specialty">Marketing</p>
@@ -303,12 +565,57 @@
               </div>
             </li>
             <li class="command__item">
-              <img
-                src="./image/command/img7.jpg"
-                alt="парень"
-                width="450"
-                height="460"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./image/command/webp/designer-desktop-1x.webp 1x,
+                    ./image/command/webp/designer-desktop-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/designer-desktop-1x.jpg 1x,
+                    ./image/command/designer-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/designer-tablet-1x.webp 1x,
+                    ./image/command/webp/designer-tablet-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/designer-tablet-1x.jpg 1x,
+                    ./image/command/designer-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/webp/designer-phone-1x.webp 1x,
+                    ./image/command/webp/designer-phone-2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./image/command/designer-phone-1x.jpg 1x,
+                    ./image/command/designer-phone-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./image/command/designer-desktop-1x.jpg"
+                  alt="дизайн"
+                />
+              </picture>
               <div class="command__card">
                 <h3 class="command__name">Михаил Ермаков</h3>
                 <p class="command__specialty">UI Designer</p>
@@ -564,6 +871,7 @@
       </div>
     </div>
 
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
