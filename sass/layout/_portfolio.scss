@@ -106,6 +106,10 @@
   .portfolio__link:focus & {
     transform: translateY(0);
   }
+
+  @media screen and (max-width: 479px) {
+    overflow-y: scroll;
+  }
 }
 
 .portfolio__thumb {

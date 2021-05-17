@@ -1113,6 +1113,12 @@ img {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 479px) {
+  .portfolio__description {
+    overflow-y: scroll;
+  }
+}
+
 .portfolio__thumb {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
