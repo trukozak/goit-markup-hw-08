@@ -1099,7 +1099,8 @@ img {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 63px 24px;
+  padding: 74px 24px;
+  overflow-y: scroll;
   background-color: var(--background-portfolio-overlay);
   font-weight: 400;
   font-size: 18px;
@@ -1113,9 +1114,15 @@ img {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 768px) {
   .portfolio__description {
-    overflow-y: scroll;
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__description {
+    padding: 63px 24px;
   }
 }
 
