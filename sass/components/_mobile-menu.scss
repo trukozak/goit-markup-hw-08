@@ -22,7 +22,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  
+
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -72,8 +72,8 @@
   }
 
   @media screen and (min-width: 480px) {
-      font-size: 40px;
-    }
+    font-size: 40px;
+  }
 }
 
 .mobile-nav-menu__link--active {
@@ -91,7 +91,7 @@
   color: var(--accent-color);
 
   @media screen and (min-width: 480px) {
-      font-size: 34px;
+    font-size: 34px;
   }
 }
 
@@ -107,9 +107,9 @@
     color: var(--accent-color);
   }
 
-    @media screen and (min-width: 480px) {
-      font-size: 24px;
-    }
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+  }
 }
 
 .mobile-social__list {
@@ -131,6 +131,6 @@
   color: var(--accent-color);
 
   @media screen and (min-width: 480px) {
-      font-size: 18px;
-    }
+    font-size: 18px;
+  }
 }
